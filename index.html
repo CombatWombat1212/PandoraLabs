@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.rawgit.com/feiss/aframe-environment-component/76b2bbf3/aframe-environment-component.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="preloader.js"></script>
+    <title>Pandora Labs</title>
+</head>
+
+<body>
+
+    <div id="preload" class="pre-loader container show">
+
+        <div class="ui row container mx-auto my-auto">
+            <div id="startButton" class="mx-auto my-auto" onclick="begin();">Enter Pandora Labs</div>
+        </div>
+
+    </div>
+
+
+
+
+    <a-scene shadow="basic" light="defaultLightsEnabled: false" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="" log="loaded" class="hide scene" id="scene">
+
+
+
+        <a-assets>
+
+
+            <asset-item id="objectBulb.000.obj" src="assets/Bulb.000.obj"></asset-item>
+            <asset-item id="objectBulb.001.obj" src="assets/Bulb.001.obj"></asset-item>
+            <asset-item id="objectBulb.004.obj" src="assets/Bulb.004.obj"></asset-item>
+            <asset-item id="objectBulb.005.obj" src="assets/Bulb.005.obj"></asset-item>
+            <asset-item id="objectCircle.002.obj" src="assets/Circle.002.obj"></asset-item>
+            <asset-item id="objectCircle.006.obj" src="assets/Circle.006.obj"></asset-item>
+            <asset-item id="objectCircle.029.obj" src="assets/Circle.029.obj"></asset-item>
+            <asset-item id="objectCircle.030.obj" src="assets/Circle.030.obj"></asset-item>
+            <asset-item id="objectCircle.031.obj" src="assets/Circle.031.obj"></asset-item>
+            <asset-item id="objectCircle.032.obj" src="assets/Circle.032.obj"></asset-item>
+            <asset-item id="objectCircle.033.obj" src="assets/Circle.033.obj"></asset-item>
+            <asset-item id="objectCircle.034.obj" src="assets/Circle.034.obj"></asset-item>
+            <asset-item id="objectCircle.035.obj" src="assets/Circle.035.obj"></asset-item>
+            <asset-item id="objectCircle.036.obj" src="assets/Circle.036.obj"></asset-item>
+            <asset-item id="objectCircle.037.obj" src="assets/Circle.037.obj"></asset-item>
+            <asset-item id="objectCircle.038.obj" src="assets/Circle.038.obj"></asset-item>
+            <asset-item id="objectCircle.039.obj" src="assets/Circle.039.obj"></asset-item>
+            <asset-item id="objectCircle.040.obj" src="assets/Circle.040.obj"></asset-item>
+            <asset-item id="objectCircle.041.obj" src="assets/Circle.041.obj"></asset-item>
+            <asset-item id="objectCircle.042.obj" src="assets/Circle.042.obj"></asset-item>
+            <asset-item id="objectCircle.043.obj" src="assets/Circle.043.obj"></asset-item>
+            <asset-item id="objectCircle.044.obj" src="assets/Circle.044.obj"></asset-item>
+            <asset-item id="objectCircle.060.obj" src="assets/Circle.060.obj"></asset-item>
+            <asset-item id="objectCircle.063.obj" src="assets/Circle.063.obj"></asset-item>
+            <asset-item id="objectCircle.064.obj" src="assets/Circle.064.obj"></asset-item>
+            <asset-item id="objectCircle.065.obj" src="assets/Circle.065.obj"></asset-item>
+            <asset-item id="objectCircle.067.obj" src="assets/Circle.067.obj"></asset-item>
+            <asset-item id="objectCircle.068.obj" src="assets/Circle.068.obj"></asset-item>
+            <asset-item id="objectCircle.120.obj" src="assets/Circle.120.obj"></asset-item>
+            <asset-item id="objectCircle.obj" src="assets/Circle.obj"></asset-item>
+            <asset-item id="objectCube.001.obj" src="assets/Cube.001.obj"></asset-item>
+            <asset-item id="objectCube.009.obj" src="assets/Cube.009.obj"></asset-item>
+            <asset-item id="objectCube.016.obj" src="assets/Cube.016.obj"></asset-item>
+            <asset-item id="objectCube.020.obj" src="assets/Cube.020.obj"></asset-item>
+            <asset-item id="objectCurve.001.obj" src="assets/Curve.001.obj"></asset-item>
+            <asset-item id="objectCurve.005.obj" src="assets/Curve.005.obj"></asset-item>
+            <asset-item id="objectibm1620.001.obj" src="assets/ibm1620.001.obj"></asset-item>
+            <asset-item id="objectibm1620.obj" src="assets/ibm1620.obj"></asset-item>
+            <asset-item id="objectLine293.002.obj" src="assets/Line293.002.obj"></asset-item>
+            <asset-item id="objectLine293.003.obj" src="assets/Line293.003.obj"></asset-item>
+            <asset-item id="objectpandora's_lab_branding_v3.001.obj" src="assets/pandora's_lab_branding_v3.001.obj"></asset-item>
+            <asset-item id="objectpandora's_lab_branding_v3.obj" src="assets/pandora's_lab_branding_v3.obj"></asset-item>
+            <asset-item id="objectPlane.001.obj" src="assets/Plane.001.obj"></asset-item>
+            <asset-item id="objectPlane.002.obj" src="assets/Plane.002.obj"></asset-item>
+            <asset-item id="objectPlane.005.obj" src="assets/Plane.005.obj"></asset-item>
+            <asset-item id="objectPlane.006.obj" src="assets/Plane.006.obj"></asset-item>
+            <asset-item id="objectPlane.007.obj" src="assets/Plane.007.obj"></asset-item>
+            <asset-item id="objectPlane.008.obj" src="assets/Plane.008.obj"></asset-item>
+            <asset-item id="objectPlane.009.obj" src="assets/Plane.009.obj"></asset-item>
+            <asset-item id="objectPlane.014.obj" src="assets/Plane.014.obj"></asset-item>
+            <asset-item id="objectPlane.015.obj" src="assets/Plane.015.obj"></asset-item>
+            <asset-item id="objectPlane.016.obj" src="assets/Plane.016.obj"></asset-item>
+            <asset-item id="objectPlane.017.obj" src="assets/Plane.017.obj"></asset-item>
+            <asset-item id="objectPlane.018.obj" src="assets/Plane.018.obj"></asset-item>
+            <asset-item id="objectPlane.052.obj" src="assets/Plane.052.obj"></asset-item>
+            <asset-item id="objectPlane.061.obj" src="assets/Plane.061.obj"></asset-item>
+            <asset-item id="objectPlane.073.obj" src="assets/Plane.073.obj"></asset-item>
+            <asset-item id="objectPlane.obj" src="assets/Plane.obj"></asset-item>
+            <asset-item id="objectRobot.obj" src="assets/Robot.obj"></asset-item>
+            <asset-item id="objectSpeaker.002.obj" src="assets/Speaker.002.obj"></asset-item>
+            <asset-item id="objectSpeaker.003.obj" src="assets/Speaker.003.obj"></asset-item>
+            <asset-item id="objectSpeaker.004.obj" src="assets/Speaker.004.obj"></asset-item>
+            <asset-item id="objectSpeaker.005.obj" src="assets/Speaker.005.obj"></asset-item>
+            <asset-item id="objectSpeaker.obj" src="assets/Speaker.obj"></asset-item>
+            <asset-item id="objectText.obj" src="assets/Text.obj"></asset-item>
+            <asset-item id="objectTorus.002.obj" src="assets/Torus.002.obj"></asset-item>
+            <asset-item id="objectPlane.061.obj" src="assets/Plane.061.obj"></asset-item>
+            <asset-item id="objectPlane.073.obj" src="assets/Plane.073.obj"></asset-item>
+            <asset-item id="objectPlane.075.obj" src="assets/Plane.075.obj"></asset-item>
+            <asset-item id="objectPlane.077.obj" src="assets/Plane.077.obj"></asset-item>
+            <asset-item id="objectPlane.078.obj" src="assets/Plane.078.obj"></asset-item>
+            
+            
+            <asset-item id="objectPlane.080.obj" src="assets/Plane.080.obj"></asset-item>
+            <asset-item id="objectPlane.081.obj" src="assets/Plane.081.obj"></asset-item>
+            <asset-item id="objectPlane.082.obj" src="assets/Plane.082.obj"></asset-item>
+            <asset-item id="objectPlane.083.obj" src="assets/Plane.083.obj"></asset-item>
+            <asset-item id="objectPlane.084.obj" src="assets/Plane.084.obj"></asset-item>
+            <asset-item id="objectPlane.085.obj" src="assets/Plane.085.obj"></asset-item>
+            
+            
+            
+            <asset-item id="objectCube.036.obj" src="assets/objectCube.036.obj"></asset-item>
+
+
+            <asset-item id="objectScreen.obj" src="assets/screen.obj"></asset-item>
+
+
+
+            <asset-item id="materialBulb.000.mtl" src="assets/Bulb.000.mtl"></asset-item>
+            <asset-item id="materialBulb.001.mtl" src="assets/Bulb.001.mtl"></asset-item>
+            <asset-item id="materialBulb.004.mtl" src="assets/Bulb.004.mtl"></asset-item>
+            <asset-item id="materialBulb.005.mtl" src="assets/Bulb.005.mtl"></asset-item>
+            <asset-item id="materialCircle.002.mtl" src="assets/Circle.002.mtl"></asset-item>
+            <asset-item id="materialCircle.006.mtl" src="assets/Circle.006.mtl"></asset-item>
+            <asset-item id="materialCircle.029.mtl" src="assets/Circle.029.mtl"></asset-item>
+            <asset-item id="materialCircle.030.mtl" src="assets/Circle.030.mtl"></asset-item>
+            <asset-item id="materialCircle.031.mtl" src="assets/Circle.031.mtl"></asset-item>
+            <asset-item id="materialCircle.032.mtl" src="assets/Circle.032.mtl"></asset-item>
+            <asset-item id="materialCircle.033.mtl" src="assets/Circle.033.mtl"></asset-item>
+            <asset-item id="materialCircle.034.mtl" src="assets/Circle.034.mtl"></asset-item>
+            <asset-item id="materialCircle.035.mtl" src="assets/Circle.035.mtl"></asset-item>
+            <asset-item id="materialCircle.036.mtl" src="assets/Circle.036.mtl"></asset-item>
+            <asset-item id="materialCircle.037.mtl" src="assets/Circle.037.mtl"></asset-item>
+            <asset-item id="materialCircle.038.mtl" src="assets/Circle.038.mtl"></asset-item>
+            <asset-item id="materialCircle.039.mtl" src="assets/Circle.039.mtl"></asset-item>
+            <asset-item id="materialCircle.040.mtl" src="assets/Circle.040.mtl"></asset-item>
+            <asset-item id="materialCircle.041.mtl" src="assets/Circle.041.mtl"></asset-item>
+            <asset-item id="materialCircle.042.mtl" src="assets/Circle.042.mtl"></asset-item>
+            <asset-item id="materialCircle.043.mtl" src="assets/Circle.043.mtl"></asset-item>
+            <asset-item id="materialCircle.044.mtl" src="assets/Circle.044.mtl"></asset-item>
+            <asset-item id="materialCircle.060.mtl" src="assets/Circle.060.mtl"></asset-item>
+            <asset-item id="materialCircle.063.mtl" src="assets/Circle.063.mtl"></asset-item>
+            <asset-item id="materialCircle.064.mtl" src="assets/Circle.064.mtl"></asset-item>
+            <asset-item id="materialCircle.065.mtl" src="assets/Circle.065.mtl"></asset-item>
+            <asset-item id="materialCircle.067.mtl" src="assets/Circle.067.mtl"></asset-item>
+            <asset-item id="materialCircle.068.mtl" src="assets/Circle.068.mtl"></asset-item>
+            <asset-item id="materialCircle.120.mtl" src="assets/Circle.120.mtl"></asset-item>
+            <asset-item id="materialCircle.mtl" src="assets/Circle.mtl"></asset-item>
+            <asset-item id="materialCube.001.mtl" src="assets/Cube.001.mtl"></asset-item>
+            <asset-item id="materialCube.009.mtl" src="assets/Cube.009.mtl"></asset-item>
+            <asset-item id="materialCube.016.mtl" src="assets/Cube.016.mtl"></asset-item>
+            <asset-item id="materialCube.020.mtl" src="assets/Cube.020.mtl"></asset-item>
+            <asset-item id="materialCurve.001.mtl" src="assets/Curve.001.mtl"></asset-item>
+            <asset-item id="materialCurve.005.mtl" src="assets/Curve.005.mtl"></asset-item>
+            <asset-item id="materialibm1620.001.mtl" src="assets/ibm1620.001.mtl"></asset-item>
+            <asset-item id="materialibm1620.mtl" src="assets/ibm1620.mtl"></asset-item>
+            <asset-item id="materialLine293.002.mtl" src="assets/Line293.002.mtl"></asset-item>
+            <asset-item id="materialLine293.003.mtl" src="assets/Line293.003.mtl"></asset-item>
+            <asset-item id="materialpandora's_lab_branding_v3.001.mtl" src="assets/pandora's_lab_branding_v3.001.mtl"></asset-item>
+            <asset-item id="materialpandora's_lab_branding_v3.mtl" src="assets/pandora's_lab_branding_v3.mtl"></asset-item>
+            <asset-item id="materialPlane.001.mtl" src="assets/Plane.001.mtl"></asset-item>
+            <asset-item id="materialPlane.002.mtl" src="assets/Plane.002.mtl"></asset-item>
+            <asset-item id="materialPlane.005.mtl" src="assets/Plane.005.mtl"></asset-item>
+            <asset-item id="materialPlane.006.mtl" src="assets/Plane.006.mtl"></asset-item>
+            <asset-item id="materialPlane.007.mtl" src="assets/Plane.007.mtl"></asset-item>
+            <asset-item id="materialPlane.008.mtl" src="assets/Plane.008.mtl"></asset-item>
+            <asset-item id="materialPlane.009.mtl" src="assets/Plane.009.mtl"></asset-item>
+            <asset-item id="materialPlane.014.mtl" src="assets/Plane.014.mtl"></asset-item>
+            <asset-item id="materialPlane.015.mtl" src="assets/Plane.015.mtl"></asset-item>
+            <asset-item id="materialPlane.016.mtl" src="assets/Plane.016.mtl"></asset-item>
+            <asset-item id="materialPlane.017.mtl" src="assets/Plane.017.mtl"></asset-item>
+            <asset-item id="materialPlane.018.mtl" src="assets/Plane.018.mtl"></asset-item>
+            <asset-item id="materialPlane.052.mtl" src="assets/Plane.052.mtl"></asset-item>
+            <asset-item id="materialPlane.061.mtl" src="assets/Plane.061.mtl"></asset-item>
+            <asset-item id="materialPlane.073.mtl" src="assets/Plane.073.mtl"></asset-item>
+            <asset-item id="materialPlane.mtl" src="assets/Plane.mtl"></asset-item>
+            <asset-item id="materialRobot.mtl" src="assets/Robot.mtl"></asset-item>
+            <asset-item id="materialSpeaker.002.mtl" src="assets/Speaker.002.mtl"></asset-item>
+            <asset-item id="materialSpeaker.003.mtl" src="assets/Speaker.003.mtl"></asset-item>
+            <asset-item id="materialSpeaker.004.mtl" src="assets/Speaker.004.mtl"></asset-item>
+            <asset-item id="materialSpeaker.005.mtl" src="assets/Speaker.005.mtl"></asset-item>
+            <asset-item id="materialSpeaker.mtl" src="assets/Speaker.mtl"></asset-item>
+            <asset-item id="materialText.mtl" src="assets/Text.mtl"></asset-item>
+            <asset-item id="materialTorus.002.mtl" src="assets/Torus.002.mtl"></asset-item>
+            <asset-item id="materialPlane.073.mtl" src="assets/Plane.073.mtl"></asset-item>
+            <asset-item id="materialPlane.075.mtl" src="assets/Plane.075.mtl"></asset-item>
+            <asset-item id="materialPlane.077.mtl" src="assets/Plane.077.mtl"></asset-item>
+            <asset-item id="materialPlane.078.mtl" src="assets/Plane.078.mtl"></asset-item>
+
+
+
+
+            <asset-item id="materialPlane.080.mtl" src="assets/Plane.080.mtl"></asset-item>
+            <asset-item id="materialPlane.081.mtl" src="assets/Plane.081.mtl"></asset-item>
+            <asset-item id="materialPlane.082.mtl" src="assets/Plane.082.mtl"></asset-item>
+            <asset-item id="materialPlane.083.mtl" src="assets/Plane.083.mtl"></asset-item>
+            <asset-item id="materialPlane.084.mtl" src="assets/Plane.084.mtl"></asset-item>
+            <asset-item id="materialPlane.085.mtl" src="assets/Plane.085.mtl"></asset-item>
+
+
+            <asset-item id="materialScreen.mtl" src="assets/screen.mtl"></asset-item>
+
+
+
+
+            <asset-item id="materialPlane.061.mtl" src="assets/Plane.061.mtl"></asset-item>
+
+
+            <!--            <asset-item id="energyTest.gltf" src="assets/energyTest.gltf"></asset-item>-->
+
+            <audio id="Ambient" src="assets/Sounds/AmbientSound.mp3"></audio>
+            <audio id="AlarmLoop.mp3" src="assets/Sounds/AlarmLoop.mp3"></audio>
+            <audio id="BadChoice.mp3" src="assets/Sounds/BadChoice.mp3"></audio>
+            <audio id="BadChoiceVoice.mp3" src="assets/Sounds/BadChoiceVoice.mp3"></audio>
+            <audio id="DepositBook.mp3" src="assets/Sounds/DepositBook.mp3"></audio>
+            <audio id="Explosion.mp3" src="assets/Sounds/Explosion.mp3"></audio>
+            <audio id="GoodChoice.mp3" src="assets/Sounds/GoodChoice.mp3"></audio>
+            <audio id="GoodChoiceVoice.mp3" src="assets/Sounds/GoodChoiceVoice.mp3"></audio>
+            <audio id="HoverOverBook.mp3" src="assets/Sounds/HoverOverBook.mp3"></audio>
+            <audio id="LucieIntro.mp3" src="assets/Sounds/LucieIntro.mp3"></audio>
+            <audio id="NotInteractable.mp3" src="assets/Sounds/NotInteractable.mp3"></audio>
+            <audio id="PickupBook.mp3" src="assets/Sounds/PickupBook.mp3"></audio>
+            <audio id="VictorIntro.mp3" src="assets/Sounds/VictorIntro.mp3"></audio>
+            <audio id="FullIntro.mp3" src="assets/Sounds/FullIntro.mp3"></audio>
+            <audio id="Explosion2.mp3" src="assets/Sounds/Explosion2.mp3"></audio>
+            <audio id="LightSwitch1.mp3" src="assets/Sounds/LightSwitch1.mp3"></audio>
+            <audio id="LightSwitch2.mp3" src="assets/Sounds/LightSwitch2.mp3"></audio>
+
+            <video id="testVideo" src="assets/Textures/VideoTest.mp4" volume="0.7" autoplay="true"></video>
+        </a-assets>
+
+
+        <a-obj-model id="enviro" src="#objectPlane.obj" mtl="#materialPlane.mtl" material="" obj-model="" visible="" position="0 0 0"></a-obj-model>
+
+        <a-entity id="light1" position="0 50 0" light="type: hemisphere; color: #ffffbf; intensity: 0.4" visible=""></a-entity>
+        <a-entity id="boomLight" position="0 50 0" light="type: hemisphere; color: #CEE4F0;intensity:0.4" visible=""></a-entity>
+        <a-entity id="light2" position="-0.11 1 0.33" light="intensity: 0.6" visible=""></a-entity>
+
+
+        <a-obj-model src="#objectBulb.000.obj" mtl="#materialBulb.000.mtl" material="" obj-model="" visible="" rotation="" position="4.421 3.019 1.179"></a-obj-model>
+        <a-obj-model src="#objectBulb.005.obj" mtl="#materialBulb.005.mtl" material="" obj-model="" visible="" position="4.416 2.988 1.183"></a-obj-model>
+        <a-obj-model src="#objectCircle.006.obj" mtl="#materialCircle.006.mtl" material="" obj-model="" visible="" position="0.10791 3.961 5.312"></a-obj-model>
+        <a-obj-model src="#objectCircle.120.obj" mtl="#materialCircle.120.mtl" material="" obj-model="" visible="" position="-3.786 0.462 -2.860"></a-obj-model>
+
+
+        <a-obj-model src="#objectCube.001.obj" mtl="#materialCube.001.mtl" material="" obj-model="" visible="" position="-0.36 3.99795 -4.107" scale="1.25 1.25 1"></a-obj-model>
+
+
+        <a-obj-model id="screen" src="#objectScreen.obj" material="src:#testVideo; autoplay:false;" visible="" position="-0.36 3.99795 -4.107" scale="1.25 1.25 1"></a-obj-model>
+
+
+
+
+        <a-obj-model src="#objectCube.009.obj" mtl="#materialCube.009.mtl" material="" obj-model="" visible="" position="4.513 0.830 2.871"></a-obj-model>
+        <a-obj-model src="#objectCube.016.obj" mtl="#materialCube.016.mtl" material="" obj-model="" visible="" position="-0.203 0.724 -3.668"></a-obj-model>
+        <a-obj-model id="gen2" src="#objectCube.020.obj" mtl="#materialCube.020.mtl" material="" obj-model="" visible="" position="7.418 0.787 2.868"></a-obj-model>
+
+
+        <a-obj-model src="#objectCurve.001.obj" mtl="#materialCurve.001.mtl" material="" obj-model="" visible="" position="-1.77497 3.98644 5.367"></a-obj-model>
+
+        <a-obj-model src="#objectCurve.005.obj" mtl="#materialCurve.005.mtl" material="" obj-model="" visible="" position="0.1092 3.93335 5.313"></a-obj-model>
+
+        <a-obj-model src="#objectpandora's_lab_branding_v3.001.obj" mtl="#materialpandora's_lab_branding_v3.001.mtl" material="" obj-model="" visible="" position="0.000 3.273 0.000"></a-obj-model>
+        <a-obj-model src="#objectpandora's_lab_branding_v3.obj" mtl="#materialpandora's_lab_branding_v3.mtl" material="" obj-model="" visible="" position="0.000 -2.209 0.000"></a-obj-model>
+        <a-obj-model src="#objectPlane.001.obj" mtl="#materialPlane.001.mtl" material="" obj-model="" visible="" position="-1.797 8.49 -1.60029"></a-obj-model>
+        <a-obj-model src="#objectPlane.002.obj" mtl="#materialPlane.002.mtl" material="" obj-model="" visible="" position="-0.775 8.53024 1.21832"></a-obj-model>
+        <a-obj-model src="#objectPlane.005.obj" mtl="#materialPlane.005.mtl" material="" obj-model="" visible="" position="0.792 5.8753 -3.27026"></a-obj-model>
+        <a-obj-model src="#objectPlane.006.obj" mtl="#materialPlane.006.mtl" material="" obj-model="" visible="" position="1.056 0.50796 2.86259"></a-obj-model>
+
+
+        <a-obj-model id="bookTable" src="#objectPlane.007.obj" mtl="#materialPlane.007.mtl" material="" obj-model="" visible="" position="-3.177 0.508 2.91333" shadow="receive:true;"></a-obj-model>
+
+
+
+        <a-obj-model src="#objectPlane.008.obj" mtl="#materialPlane.008.mtl" material="" obj-model="" visible="" position="-0.59311 0.75536 -3.8444"></a-obj-model>
+        <a-obj-model src="#objectPlane.009.obj" mtl="#materialPlane.009.mtl" material="" obj-model="" visible="" position="-3.16709 0.508 -0.76319"></a-obj-model>
+        <a-obj-model src="#objectPlane.014.obj" mtl="#materialPlane.014.mtl" material="" obj-model="" visible="" position="4.877 3.04525 -0.32716"></a-obj-model>
+
+
+        <a-obj-model id="GenRoom" src="#objectPlane.015.obj" mtl="#materialPlane.015.mtl" material="" obj-model="" visible="" position="6.5015 1.0348 -1.53963"></a-obj-model>
+
+
+        <a-obj-model src="#objectPlane.016.obj" mtl="#materialPlane.016.mtl" material="" obj-model="" visible="" position="8.86 2.51269 -1.64299"></a-obj-model>
+        <a-obj-model src="#objectPlane.017.obj" mtl="#materialPlane.017.mtl" material="" obj-model="" visible="" position="4.22 3.26192 0.88252"></a-obj-model>
+        <a-obj-model src="#objectPlane.018.obj" mtl="#materialPlane.018.mtl" material="" obj-model="" visible="" position="2.692 1.24105 2.50828"></a-obj-model>
+        <a-obj-model src="#objectPlane.052.obj" mtl="#materialPlane.052.mtl" material="" obj-model="" visible="" position="6.502 1.0358 -1.53698"></a-obj-model>
+
+
+        <a-entity id="flagsEmpty">
+<!--
+            <a-obj-model src="#objectPlane.080.obj" mtl="#materialPlane.080.mtl" material="" obj-model="" visible=""></a-obj-model>
+            <a-obj-model src="#objectPlane.081.obj" mtl="#materialPlane.081.mtl" material="" obj-model="" visible=""></a-obj-model>
+            <a-obj-model src="#objectPlane.082.obj" mtl="#materialPlane.082.mtl" material="" obj-model="" visible=""></a-obj-model>
+            <a-obj-model src="#objectPlane.083.obj" mtl="#materialPlane.083.mtl" material="" obj-model="" visible=""></a-obj-model>
+            <a-obj-model src="#objectPlane.084.obj" mtl="#materialPlane.084.mtl" material="" obj-model="" visible=""></a-obj-model>
+            <a-obj-model src="#objectPlane.085.obj" mtl="#materialPlane.085.mtl" material="" obj-model="" visible=""></a-obj-model>
+-->
+
+        </a-entity>
+
+
+
+
+        <a-obj-model src="#objectRobot.obj" mtl="#materialRobot.mtl" material="" obj-model="" visible="" position="6.716 0.12481 -3.73165"></a-obj-model>
+
+
+
+        <a-entity id="speakerEmpty">
+            <a-obj-model id="speaker" src="#objectSpeaker.002.obj" mtl="#materialSpeaker.002.mtl" material="" obj-model="" visible="" position="2.661 1.53812 0.8826"></a-obj-model>
+            <a-obj-model src="#objectSpeaker.003.obj" mtl="#materialSpeaker.003.mtl" material="" obj-model="" visible="" position="2.65522 1.508 0.87498"></a-obj-model>
+            <a-obj-model src="#objectSpeaker.004.obj" mtl="#materialSpeaker.004.mtl" material="" obj-model="" visible="" position="2.652 1.50816 0.88034"></a-obj-model>
+            <a-obj-model src="#objectSpeaker.005.obj" mtl="#materialSpeaker.005.mtl" material="" obj-model="" visible="" position="2.665 1.54574 0.87887"></a-obj-model>
+            <a-obj-model src="#objectSpeaker.obj" mtl="#materialSpeaker.mtl" material="" obj-model="" visible="" position="2.702 1.77445 0.75821"></a-obj-model>
+        </a-entity>
+
+
+
+
+
+
+
+        <a-obj-model src="#objectTorus.002.obj" mtl="#materialTorus.002.mtl" material="" obj-model="" visible="" position="2.72 3.9324 1.61636"></a-obj-model>
+        <a-obj-model src="#objectCircle.029.obj" mtl="#materialCircle.029.mtl" material="" obj-model="" visible="" position="1.251 0.84659 1.69602"></a-obj-model>
+        <a-obj-model src="#objectCircle.030.obj" mtl="#materialCircle.030.mtl" material="" obj-model="" visible="" position="-3.607 0.88671 4.26218"></a-obj-model>
+        <a-obj-model src="#objectCircle.031.obj" mtl="#materialCircle.031.mtl" material="" obj-model="" visible="" position="-3.516 0.85576 4.24117"></a-obj-model>
+        <a-obj-model src="#objectCircle.032.obj" mtl="#materialCircle.032.mtl" material="" obj-model="" visible="" position="-3.509 0.87165 1.57277"></a-obj-model>
+        <a-obj-model src="#objectCircle.033.obj" mtl="#materialCircle.033.mtl" material="" obj-model="" visible="" position="-3.434 0.88381 -1.01746"></a-obj-model>
+        <a-obj-model src="#objectCircle.034.obj" mtl="#materialCircle.034.mtl" material="" obj-model="" visible="" position="-3.408 0.88481 -1.18351"></a-obj-model>
+        <a-obj-model src="#objectCircle.035.obj" mtl="#materialCircle.035.mtl" material="" obj-model="" visible="" position="-3.553 0.85241 1.70403"></a-obj-model>
+        <a-obj-model src="#objectCircle.036.obj" mtl="#materialCircle.036.mtl" material="" obj-model="" visible="" position="-3.452 0.87202 4.21188"></a-obj-model>
+        <a-obj-model src="#objectCircle.037.obj" mtl="#materialCircle.037.mtl" material="" obj-model="" visible="" position="-1.846 0.78194 -3.59235"></a-obj-model>
+        <a-obj-model src="#objectCircle.038.obj" mtl="#materialCircle.038.mtl" material="" obj-model="" visible="" position="-3.346 0.8554 1.61156"></a-obj-model>
+        <a-obj-model src="#objectCircle.039.obj" mtl="#materialCircle.039.mtl" material="" obj-model="" visible="" position="1.338 0.77801 3.88042"></a-obj-model>
+        <a-obj-model src="#objectCircle.040.obj" mtl="#materialCircle.040.mtl" material="" obj-model="" visible="" position="0.629 0.75985 -3.6277"></a-obj-model>
+        <a-obj-model src="#objectCircle.041.obj" mtl="#materialCircle.041.mtl" material="" obj-model="" visible="" position="-1.72 0.76028 -3.77207"></a-obj-model>
+        <a-obj-model src="#objectCircle.042.obj" mtl="#materialCircle.042.mtl" material="" obj-model="" visible="" position="0.595 0.77381 -3.57444"></a-obj-model>
+        <a-obj-model src="#objectCircle.043.obj" mtl="#materialCircle.043.mtl" material="" obj-model="" visible="" position="0.68 0.83268 -3.76625"></a-obj-model>
+        <a-obj-model src="#objectCircle.044.obj" mtl="#materialCircle.044.mtl" material="" obj-model="" visible="" position="-3.59 0.87346 4.09286"></a-obj-model>
+        <a-obj-model src="#objectCircle.060.obj" mtl="#materialCircle.060.mtl" material="" obj-model="" visible="" position="-1.839 0.82611 -3.74256"></a-obj-model>
+        <a-obj-model src="#objectCircle.063.obj" mtl="#materialCircle.063.mtl" material="" obj-model="" visible="" position="-3.542 0.86271 -0.50379"></a-obj-model>
+        <a-obj-model src="#objectCircle.064.obj" mtl="#materialCircle.064.mtl" material="" obj-model="" visible="" position="-3.566 0.88867 -0.34176"></a-obj-model>
+        <a-obj-model src="#objectCircle.065.obj" mtl="#materialCircle.065.mtl" material="" obj-model="" visible="" position="1.324 0.77819 1.76965"></a-obj-model>
+        <a-obj-model src="#objectCircle.067.obj" mtl="#materialCircle.067.mtl" material="" obj-model="" visible="" position="-3.576 0.78046 -1.10996"></a-obj-model>
+        <a-obj-model src="#objectCircle.068.obj" mtl="#materialCircle.068.mtl" material="" obj-model="" visible="" position="1.317 0.79014 3.82124"></a-obj-model>
+        <a-obj-model src="#objectLine293.002.obj" mtl="#materialLine293.002.mtl" material="" obj-model="" visible="" position="-2.842 0.9896 1.79731"></a-obj-model>
+        <a-obj-model src="#objectLine293.003.obj" mtl="#materialLine293.003.mtl" material="" obj-model="" visible="" position="1.084 0.98246 3.9541"></a-obj-model>
+
+
+        <a-obj-model id="bad" src="#objectPlane.077.obj" mtl="#materialPlane.077.mtl" material="" obj-model="" visible="" position="-0.151 0 4.744"></a-obj-model>
+        <a-obj-model id="good" src="#objectPlane.078.obj" mtl="#materialPlane.078.mtl" material="" obj-model="" visible="" position="-1.789 0 4.744"></a-obj-model>
+
+
+
+        <a-obj-model id="lucie" src="#objectibm1620.001.obj" mtl="#materialibm1620.001.mtl" material="" obj-model="" visible="" position="-4.15 4.376 0.944"></a-obj-model>
+        <a-obj-model src="#objectibm1620.obj" mtl="#materialibm1620.mtl" material="" obj-model="" visible="" position="-4.165 4.376 0.9399"></a-obj-model>
+        <a-obj-model src="#objectText.obj" mtl="#materialText.mtl" material="" obj-model="" visible="" position="-4.112 2.554 0.83874"></a-obj-model>
+
+        <!--    ambient animations in scene    -->
+
+
+        <a-obj-model src="#objectPlane.073.obj" mtl="#materialPlane.073.mtl" position="7.4373 0.84682 2.7945" animation="property: rotation; to: 0 0 360; loop: true; dur: 2000; easing:linear;" animation__2="property:position; to:7.4373 0.84682 2.7945; from:7.4373 0.84682 2.938; dir:alternate; loop: true; dur: 1000; easing:easeInOutSine;" animation__3="property:scale; from:1 1 1; to:1 1 1.1; dir:alternate; loop: true; dur: 500; easing:easeInOutSine;"></a-obj-model>
+
+        <a-obj-model src="#objectPlane.061.obj" mtl="#materialPlane.061.mtl" position="4.443 0.85985 2.78092" animation="property: rotation; to: 0 0 360; loop: true; dur: 2000; easing:linear;" animation__2="property:position; from:4.443 0.860 2.797; to:4.443 0.860 2.973; dir:alternate; loop: true; dur: 1000; easing:easeInOutSine;" animation__3="property:scale; from:1 1 1; to:1 1 1.1; dir:alternate; loop: true; dur: 500; easing:easeInOutSine;"></a-obj-model>
+
+
+        <a-obj-model src="#objectCircle.002.obj" mtl="#materialCircle.002.mtl" position="7.45161 0.856 2.883" animation="property: rotation; to: 0 0 -360; loop: true; dur: 1500; easing:linear;"></a-obj-model>
+
+
+        <a-obj-model src="#objectCircle.obj" mtl="#materialCircle.mtl" rotation="0 0 0" position="4.489 0.844 2.856" animation="property: rotation; to: 0 0 -360; loop: true; dur: 1500; easing:linear;"></a-obj-model>
+
+        <!--        //end of ambient animations-->
+
+
+
+
+        <!--        interactive objects-->
+        <a-entity id="empty">
+            <a-obj-model id="results" src="#objectPlane.075.obj" mtl="#materialPlane.075.mtl" position="-3.16093 0.78234 2.92339" sound="src:#HoverOverBook.mp3; on:mouseenter; volume:0.9">
+            </a-obj-model>
+        </a-entity>
+        <!--        //interactive objects-->
+
+
+
+
+        <a-camera id="camera" position="-0.75 1.600 2.537">
+            <a-cursor id="cursor">
+            </a-cursor>
+
+        </a-camera>
+
+
+<!---1.119 1.600 2.537-->
+
+        <script>
+            var results = document.querySelector('#results');
+            var cursor = document.querySelector('#cursor');
+            var camera = document.querySelector('#camera');
+            var good = document.querySelector('#good');
+            var bad = document.querySelector('#bad');
+            var bookTable = document.querySelector('#bookTable');
+            var speaker = document.querySelector('#speaker');
+            var boomLight = document.querySelector('#boomLight');
+            var light1 = document.querySelector('#light1');
+            var light2 = document.querySelector('#light2');
+            var empty = document.querySelector('#empty');
+            var scene = document.querySelector('#scene');
+            var speakerEmpty = document.querySelector('#speakerEmpty');
+            var flagsEmpty = document.querySelector('#flagsEmpty');
+            var holdingBook = false;
+
+
+
+
+            var video = document.querySelector('#testVideo');
+            video.currentTime = 0;
+            video.pause();
+
+
+
+
+            results.addEventListener("mouseenter", function() {
+                results.removeAttribute("animation");
+                results.setAttribute("animation", "property: scale; from: 1 1 1; to: 1.2 1.2 1.2; loop: true; easing:linear; dur: 500; dir:alternate");
+
+
+            });
+
+            results.addEventListener("mouseleave", function() {
+                results.removeAttribute("animation");
+                results.setAttribute("animation", "property: scale; to: 1 1 1; loop: false; easing:linear; dur: 50");
+            });
+
+
+            results.addEventListener("mouseleave", function() {
+                results.removeAttribute("animation");
+                results.setAttribute("animation", "property: scale; to: 1 1 1; loop: false; easing:linear; dur: 50");
+            });
+
+
+
+
+            results.addEventListener("click", function() {
+                results.removeAttribute("animation");
+
+                results.remove();
+
+                var newBook = document.createElement("a-obj-model");
+                newBook.setAttribute("id", "results");
+                newBook.setAttribute("src", "#objectPlane.075.obj");
+                newBook.setAttribute("mtl", "#materialPlane.075.mtl");
+                newBook.setAttribute("position", "0 0 -1");
+                newBook.setAttribute("rotation", "180 90 90");
+
+                newBook.setAttribute("sound", "src:#PickupBook.mp3; autoplay:true; volume:0.6;");
+
+                camera.appendChild(newBook);
+
+
+
+
+
+
+
+
+                holdingBook = true;
+
+
+
+                bad.setAttribute("sound", "src:#NotInteractable.mp3; on:mouseenter;");
+                good.setAttribute("sound", "src:#NotInteractable.mp3; on:mouseenter;");
+
+
+
+
+                bad.addEventListener("mouseenter", function() {
+                    if (holdingBook) {
+                        bad.removeAttribute("animation");
+                        bad.setAttribute("animation", "property: scale; from: 1 1 1; to: 1.1 1.1 1.1; loop: true; easing:linear; dur: 500; dir:alternate");
+                    }
+
+                });
+
+
+
+                bad.addEventListener("mouseleave", function() {
+                    if (holdingBook) {
+                        bad.removeAttribute("animation");
+                        bad.setAttribute("animation", "property: scale; to: 1 1 1; loop: false; easing:linear; dur: 50");
+                    }
+                });
+
+
+                good.addEventListener("mouseenter", function() {
+                    if (holdingBook) {
+                        good.removeAttribute("animation");
+                        good.setAttribute("animation", "property: scale; from: 1 1 1; to: 1.1 1.1 1.1; loop: true; easing:linear; dur: 500; dir:alternate");
+                    }
+                });
+
+
+                good.addEventListener("mouseleave", function() {
+                    if (holdingBook) {
+                        good.removeAttribute("animation");
+                        good.setAttribute("animation", "property: scale; to: 1 1 1; loop: false; easing:linear; dur: 50");
+                    }
+                });
+
+
+
+
+                //ending triggers
+                bad.addEventListener("click", badEnding);
+                good.addEventListener("click", goodEnding);
+                ///ending triggers
+
+            });
+
+
+
+            function badEnding() {
+
+                holdingBook = false;
+
+                good.removeEventListener("click", goodEnding);
+                bad.removeEventListener("click", badEnding);
+                good.setAttribute("scale", "1 1 1");
+                bad.setAttribute("scale", "1 1 1");
+                bad.removeAttribute("animation");
+                good.removeAttribute("animation");
+
+                bad.removeAttribute("sound");
+                good.removeAttribute("sound");
+
+
+
+                console.log("Bad Ending");
+
+                var results = document.querySelector("#results");
+
+                results.remove();
+
+                var newBook = document.createElement("a-obj-model");
+                newBook.setAttribute("id", "results");
+                newBook.setAttribute("src", "#objectPlane.075.obj");
+                newBook.setAttribute("mtl", "#materialPlane.075.mtl");
+                newBook.setAttribute("position", "-0.189 1.137 3.918");
+                newBook.setAttribute("rotation", "180 -90 90");
+
+                empty.appendChild(newBook);
+
+                var results = document.querySelector("#results");
+                results.removeAttribute("animation");
+
+                results.setAttribute("animation", "property:position; from:-0.189 1.137 3.918; to:-0.189 1.137 4.672; dur:2000; delay:500");
+                results.setAttribute("animation__2", "property:rotation; from:180 -90 90; to:180 90 90; dur:1000; delay:500;");
+                results.setAttribute("animation__3", "property:position; from:-0.189 1.137 4.672; to:-0.189 -0.428 4.672; dur:1000; delay:2500");
+                results.setAttribute("animation__4", "property:position; from:-0.189 -0.428 4.672; to:-0.189 -0.428 4.672; dur:1000; delay:3500");
+
+
+                results.addEventListener('animationcomplete__2', function() {
+                    bad.removeAttribute("sound");
+                    bad.setAttribute("sound", "src:#DepositBook.mp3; autoplay:true;");
+                });
+
+                results.addEventListener('animationcomplete__4', function() {
+                    bad.setAttribute("sound__2", "src:#BadChoice.mp3; autoplay:true; volume:2;");
+
+
+                    setTimeout(function() {
+                        speaker.setAttribute("sound__2", "src:#BadChoiceVoice.mp3; autoplay:true; volume:0.8;");
+                    }, 3000);
+                });
+
+
+                setTimeout(badEndingFinale, 14000);
+
+
+            }
+
+
+
+            function badEndingFinale() {
+                video.volume = 0.6;
+                video.currentTime = 0;
+                video.play();
+
+
+
+                setTimeout(function() {
+
+                    
+                var flag0 = document.createElement("a-obj-model");
+                var flag1 = document.createElement("a-obj-model");
+                var flag2 = document.createElement("a-obj-model");
+                var flag3 = document.createElement("a-obj-model");
+                var flag4 = document.createElement("a-obj-model");
+                var flag5 = document.createElement("a-obj-model");
+                    
+                    
+                    var flags=[flag0,flag1,flag2,flag3,flag4,flag5];
+                    
+                    for(i=0;i<6;i++){
+                        
+                        var y = i + 80;
+                        
+                        flags[i].setAttribute("id", "flag" + i);
+                        flags[i].setAttribute("src", "#objectPlane.0" + y + ".obj");
+                        flags[i].setAttribute("mtl", "#materialPlane.0" + y + ".mtl");
+
+                        console.log("flag" + i);
+                        console.log("#objectPlane.0" + y + ".obj");
+                        console.log("#materialPlane.0" + y + ".mtl");
+
+                        flagsEmpty.appendChild(flags[i]);
+                    }
+                }, 4000);
+
+
+                setTimeout(function(){
+                    
+                    
+                flag0 = document.querySelector("#flag0");
+                flag1 = document.querySelector("#flag1");
+                flag2 = document.querySelector("#flag2");
+                flag3 = document.querySelector("#flag3");
+                flag4 = document.querySelector("#flag4");
+                flag5 = document.querySelector("#flag5");
+
+                    
+                flag0.setAttribute("animation", "property:position; from:-0.464 0 0.578; to:-0.254 -6.985 0.578; dur:16000;");
+                flag3.setAttribute("animation", "property:position; from:-0.464 0 0.969; to:-0.254 -6.985 0.969; dur:16000;");
+                    
+                flag5.setAttribute("animation", "property:position; from:-0.366 0 0.606; to:-0.366 -6.497 0.606; dur:16000;");
+                flag4.setAttribute("animation", "property:position; from:4.081 0 0.432; to:4.081 -6.937 0.432; dur:16000;");
+                    
+                    
+                flag1.setAttribute("animation", "property:position; from:-0.211 0 -1.736;to:-0.211 -5.461 -1.736; dur:16000;");
+                flag2.setAttribute("animation", "property:position; from:-0.211 0 0.884; to:-0.211 -4.443 0.884; dur:16000;");
+                    
+                    
+                    
+                
+                    
+                    
+                },5000);
+                
+                setTimeout(function(){
+                    
+
+                    flag0.addEventListener("animationcomplete", function(){
+                        
+                        
+                        setTimeout(function(){
+                        cursor.setAttribute("sound", "src:#LightSwitch1.mp3; autoplay:true; volume:0.85;");
+                        boomLight.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
+                        }, 13000);
+                        
+                        setTimeout(function(){
+                        cursor.setAttribute("sound__2", "src:#LightSwitch1.mp3; autoplay:true; volume:0.85;");
+                        light1.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
+                        }, 15000);
+                        
+                        setTimeout(function(){
+                        cursor.setAttribute("sound__3", "src:#LightSwitch2.mp3; autoplay:true; volume:0.85;");
+                        light2.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
+                        
+                            setTimeout(function(){
+                                end();
+                            }, 200);
+                            
+                        }, 17000);
+                        
+                        
+                        
+                    });
+                    
+                    
+                },5100);
+                
+                
+                
+                
+            }
+
+
+
+
+
+
+
+            function goodEnding() {
+
+                holdingBook = false;
+
+                bad.removeAttribute("sound");
+                good.removeAttribute("sound");
+
+                good.removeEventListener("click", goodEnding);
+                bad.removeEventListener("click", badEnding);
+                good.setAttribute("scale", "1 1 1");
+                bad.setAttribute("scale", "1 1 1");
+                bad.removeAttribute("animation");
+                good.removeAttribute("animation");
+
+
+                console.log("Good Ending");
+
+                var results = document.querySelector("#results");
+
+                results.remove();
+
+                var newBook = document.createElement("a-obj-model");
+                newBook.setAttribute("id", "results");
+                newBook.setAttribute("src", "#objectPlane.075.obj");
+                newBook.setAttribute("mtl", "#materialPlane.075.mtl");
+                newBook.setAttribute("position", "-1.789 1.137 3.918");
+                newBook.setAttribute("rotation", "180 -90 90");
+
+                empty.appendChild(newBook);
+
+                var results = document.querySelector("#results");
+                results.removeAttribute("animation");
+
+
+                results.setAttribute("animation", "property:position; from:-1.789 1.137 3.918; to:-1.789 1.137 4.672; dur:2000; delay:500");
+                results.setAttribute("animation__2", "property:rotation; from:180 -90 90; to:180 90 90; dur:1000; delay:500;");
+                results.setAttribute("animation__3", "property:position; from:-1.789 1.137 4.672; to:-1.789 -0.428 4.672; dur:1000; delay:2500");
+                results.setAttribute("animation__4", "property:position; from:-1.789 -0.428 4.672; to:-1.789 -0.428 4.672; dur:1000; delay:3500");
+
+
+                results.addEventListener('animationcomplete__2', function() {
+                    good.removeAttribute("sound");
+                    good.setAttribute("sound", "src:#DepositBook.mp3; autoplay:true;");
+
+                });
+
+
+                results.addEventListener('animationcomplete__4', function() {
+                    good.setAttribute("sound__2", "src:#GoodChoice.mp3; autoplay:true; volume:2;");
+
+                    setTimeout(function() {
+                        speaker.setAttribute("sound__2", "src:#GoodChoiceVoice.mp3; autoplay:true; volume:0.8;");
+                    }, 3000);
+
+
+                    setTimeout(goodEndingFinale, 4000);
+                });
+            }
+
+            //speaker.setAttribute("sound", "src:#LucieIntro.mp3; autoplay:true; volume:1.2");
+
+
+            enviro.addEventListener("mouseenter", function() {
+                gen2.setAttribute("sound", "src:#Ambient; autoplay:true; volume:0.3");
+            });
+
+
+            enviro.addEventListener("mouseleave", function() {
+                setTimeout(function() {
+                    speaker.setAttribute("sound", "src:#FullIntro.mp3; autoplay:true; volume:0.8;");
+                }, 14000);
+            });
+
+
+
+
+
+
+
+
+
+            function goodEndingFinale() {
+                var cycle = 0;
+                var scale = 0.04;
+                setTimeout(function() {
+                    setInterval(function() {
+                        cycle++;
+                        if (cycle % 2 == 0) {
+                            camera.object3D.position.y += scale;
+                        } else {
+                            camera.object3D.position.y -= scale;
+                        }
+                    }, 80);
+                }, 9000);
+                setTimeout(function() {
+                    cursor.setAttribute("sound", "src:#Explosion2.mp3; autoplay:true; volume:1.5;");
+                    boomLight.setAttribute("animation", "property:light.intensity; from:0.4; to:70; dur:500; delay:22000;");
+                }, 4000);
+                boomLight.addEventListener("animationcomplete", function() {
+                    end();
+                });
+            }
+
+        </script>
+
+    </a-scene>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</html>

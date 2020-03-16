@@ -1,0 +1,25 @@
+# Blender MTL File: 'MasterNarrativeScene.blend'
+# Material Count: 2
+
+newmtl Material.020
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.106235 0.106235 0.106235
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Material.031
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.050000 Textures\\[2K]Metal09\\Metal09_nrm.jpg
+map_Kd Textures\\[2K]Metal09\\Metal09_col.jpg
+map_Ns Textures\\[2K]Metal09\\Metal09_rgh.jpg

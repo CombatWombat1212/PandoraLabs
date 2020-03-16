@@ -1,0 +1,15 @@
+# Blender v2.82 (sub 7) OBJ File: 'MasterNarrativeScene.blend'
+# www.blender.org
+mtllib Cube.036.mtl
+o Cube.036_Cube.009
+v -1.550000 -1.099833 0.398556
+v -1.550000 1.099832 0.416008
+v 1.550000 -1.099833 0.398556
+v 1.550000 1.099832 0.416008
+vt 0.999916 0.709534
+vt 0.999916 0.000084
+vt 0.000084 0.000084
+vt 0.000084 0.709534
+usemtl Keyboard
+s off
+f 4/1 3/2 1/3 2/4
