@@ -44,9 +44,6 @@
 
 
 /*aframe stuff*/
-
-
-
 .a-loader-title{
     
     font-family: AmericanTypewriter;
@@ -54,10 +51,23 @@
     letter-spacing: 0.02rem;
     font-weight: 500;
 }
-
-
-
 /*end of aframe stuff*/
+
+
+
+/*query stuff*/
+@media (max-width: 576px) {
+
+
+.controls{
+    padding-left:0rem!important;
+    padding-right:0rem!important;
+}
+
+
+
+}
+/*end of query stuff*/
 
 
 

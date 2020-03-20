@@ -24,7 +24,7 @@ function goodEnd(){
     goodEndingPage.classList.remove("hide");
     goodEndingPage.classList.add("slowReveal");
 
-    }, 3500);
+    }, 3000);
     
     
 //    scene.classList.remove("show");
@@ -43,7 +43,7 @@ function badEnd(){
         badEndingPage.classList.remove("hide");
         badEndingPage.classList.add("slowReveal");
 
-    }, 3500);
+    }, 3000);
 
     
 }

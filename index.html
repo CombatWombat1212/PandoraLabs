@@ -10,25 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ee4f756d98.js" crossorigin="anonymous"></script>
     <script src="preloader.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/assets/Pics/iconSize.png"/>
+
     <title>Pandora Labs</title>
 </head>
 
-<body>
+<body id="body">
 
     <div id="preload" class="pre-loader container show">
-        <div class="logoRow row container mx-auto col-lg-4">
+        <div class="logoRow row container mx-auto col-xl-4 col-lg-5 col-md-7 col-sm-10 col-10">
             <img class="logo" src="assets/Pics/pandora's_lab_branding-02.png">
         </div>
 
 
-        <div class="intro row container mx-auto col-lg-8">
+        <div class="intro row container mx-auto col-xl-8 col-lg-10 col-md-9 col-sm-12 col-12">
 
-            <div class="introduction col-8 mx-auto">Welcome to your first day at Pandora Labs. We hope you enjoy your time with us, and please remember that everything you are asked to do is in the name of pure science, and advancement. Thank you for everything you have contributed thus far.</div>
+            <div class="introduction col-xl-8 col-lg-8 col-md-10 col-sm-10 col-12 mx-auto">Welcome to your first day at Pandora Labs. We hope you enjoy your time with us, and please remember that everything you are asked to do is in the name of pure science, and advancement. Thank you for everything you have contributed thus far.</div>
 
 
-            <div class="controls row col-9 mx-auto">
+            <div class="controls row col-xl-9 col-lg-10 col-md-12 col-sm-12 col-12 mx-auto">
 
-                <div class="desktopControls col-6">
+                <div class="desktopControls col-xl-6 col-lg-6 col-sm-12 col-12">
                     <div class="controller row col-12">
                         <i class="fas fa-keyboard"></i>
                         <p class="controlTitle">Controls</p>
@@ -46,7 +48,7 @@
                     </ul>
                 </div>
 
-                <div class="desktopControls col-6">
+                <div class="desktopControls col-xl-6 col-lg-6 col-sm-12 col-12">
                     <div class="controller row col-12">
                         <i class="fas fa-mobile"></i>
                         <p class="controlTitle">Controls</p>
@@ -72,7 +74,7 @@
 
 
 
-        <div class="headphonesContainer row col-8 mx-auto">
+        <div class="headphonesContainer row col-xl-8 col-lg-6 col-md-12 col-sm-12 col-12 mx-auto">
             <div class="headphones row mx-auto">
                 <i class="fas fa-headphones-alt"></i>
                 <p class="headphonesText">Headphones recommended</p>
@@ -81,7 +83,7 @@
 
 
         <div class="ui row container mx-auto my-auto">
-            <div id="startButton" class="col-3 mx-auto my-auto" onclick="begin();">Enter Pandora Labs</div>
+            <div id="startButton" class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-7 mx-auto my-auto" onclick="begin();">Enter Pandora Labs</div>
         </div>
 
 
@@ -94,10 +96,10 @@
 
     <div id="goodEndingPage" class="ending container hide">
         
-        <div class="goodEndingMessage col-5 mx-auto">By choosing to send your research to the allies you were able to stall Lucie Kraus, and Pandora from launching their weapon. Once the allies received the information they used it launched a counter attack destroying Pandora Labs and saving millions of lives, but unfortunately not your own.</div>
+        <div class="goodEndingMessage col-xl-5 col-lg-6 col-md-7 col-sm-9 col-10 mx-auto">By choosing to send your research to the allies you were able to stall Lucie Kraus, and Pandora from launching their weapon. Once the allies received the information they used it launched a counter attack destroying Pandora Labs and saving millions of lives, but unfortunately not your own.</div>
 
 
-        <div class="playAgainContainer col-2 mx-auto">
+        <div class="playAgainContainer col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4 mx-auto">
             <div class="playAgain mx-auto" onclick="window.location.reload();">Play Again?</div>
         </div>
 
@@ -107,12 +109,12 @@
 
     <div id="badEndingPage" class="ending container hide">
         
-        <div class="badEndingMessage col-5 mx-auto">Choosing to hand over your research allowed the Nazi-operated Pandora Labs to complete their weapon. The weapon’s use marked the loss of millions of lives, and maybe even the end of the war. 
+        <div class="badEndingMessage col-xl-5 col-lg-6 col-md-7 col-sm-9 col-10 mx-auto">Choosing to hand over your research allowed the Nazi-operated Pandora Labs to complete their weapon. The weapon’s use marked the loss of millions of lives, and maybe even the end of the war. 
 
 Upon attempting to flee the facility after viewing the demonstration of your weapon, you were captured and forced to continue working for Pandora as a weapons scientist.</div>
 
 
-        <div class="playAgainContainer col-2 mx-auto">
+        <div class="playAgainContainer col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4 mx-auto">
             <div class="playAgain mx-auto" onclick="window.location.reload();">Play Again?</div>
         </div>
 
@@ -793,7 +795,12 @@ Upon attempting to flee the facility after viewing the demonstration of your wea
                 good.removeAttribute("animation");
 
 
-                console.log("Good Ending");
+                document.getElementById("body").style.backgroundColor = "#fff";
+
+                
+                
+                
+                
 
                 var results = document.querySelector("#results");
 
