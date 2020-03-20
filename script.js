@@ -1,6 +1,8 @@
 var preload = document.getElementById("preload");
 var scene = document.getElementById("scene");
-
+var goodEndingPage = document.querySelector("#goodEndingPage");
+var badEndingPage = document.querySelector("#badEndingPage");
+//var goodEndingPage = document.getElementById("#goodEnding");
 
 
 function begin(){
@@ -13,6 +15,43 @@ function begin(){
     
 }
 
+function goodEnd(){
+    
+    scene.classList.remove("show");
+    scene.classList.add("hide");
+    
+    setTimeout(function(){
+    goodEndingPage.classList.remove("hide");
+    goodEndingPage.classList.add("slowReveal");
+
+    }, 3500);
+    
+    
+//    scene.classList.remove("show");
+    
+    
+}
+
+
+function badEnd(){
+    
+    scene.classList.add("hide");
+    scene.classList.remove("show");
+    
+    
+    setTimeout(function(){
+        badEndingPage.classList.remove("hide");
+        badEndingPage.classList.add("slowReveal");
+
+    }, 3500);
+
+    
+}
+
+
+
+
+
 function end(){
     
     scene.classList.add("hide");
@@ -22,3 +61,9 @@ function end(){
     preload.classList.add("show");
     
 }
+
+
+
+
+
+

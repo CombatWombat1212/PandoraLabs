@@ -1,7 +1,96 @@
+:root {
+  --black: #302e2e;
+}
+
+
+@font-face {
+    font-family: AmericanTypewriter;
+    src: url(assets/Fonts/AmericanTypewriterRegular.ttf);
+}
+
+
+@font-face {
+    font-family: DIN;
+    src: url(assets/Fonts/DIN/DINPro-Light_1.otf);
+    font-weight:300;
+}
+
+@font-face {
+    font-family: DIN;
+    src: url(assets/Fonts/DIN/DINPro_1.otf);
+    font-weight:400;
+}
+
+@font-face {
+    font-family: DIN;
+    src: url(assets/Fonts/DIN/DINPro-Medium_1.otf);
+    font-weight:500;
+}
+
+@font-face {
+    font-family: DIN;
+    src: url(assets/Fonts/DIN/DINPro-Bold_1.otf);
+    font-weight:600;
+}
+
+
+@font-face {
+    font-family: DIN;
+    src: url(assets/Fonts/DIN/DINPro-Black_1.otf);
+    font-weight:800;
+}
+
+
+
+
+/*aframe stuff*/
+
+
+
+.a-loader-title{
+    
+    font-family: AmericanTypewriter;
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+}
+
+
+
+/*end of aframe stuff*/
+
+
+
+.pre-loader{
+    overflow-y: scroll;
+
+}
+
+
+
+body{
+    
+    background-color: #000;
+/*
+    font-family: AmericanTypewriter;
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+*/
+}
+
+
+
+
+
 .pre-loader{
     width:100%!important;
     height:100%!important;
-    background-color: #efc263;
+    background-image: url("assets/Pics/backgroundImage.jpg");
+    background-size:cover;
+
+/*    background-color: #efc263;*/
+    
     max-width: 100%;
     max-height: 100%;
     z-index: 100;
@@ -9,10 +98,40 @@
     padding:0rem!important;
     margin:0!important;
     
+    
+    padding-bottom:2rem;
     cursor: default!important;
 }
 
     
+.ending{
+    height:100%;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 100;
+    
+    padding:0rem!important;
+    margin:0!important;
+    
+    
+    padding-bottom:2rem;
+    cursor: default!important;
+
+}
+    
+#goodEndingPage{
+        background-color: #fff;
+}
+    
+#badEndingPage{
+        background-color: #000;
+}
+
+
+
+
+
+
 
 .scene{
     z-index: 0;
@@ -20,13 +139,12 @@
 
 
 
-#startButton{
-    margin-top:5rem!important;
+#startButton,.playAgain{
+    margin-bottom:3rem!important;
     
     text-align: center;
     
-    width:10rem;
-    height:2rem;
+    height:100%;
     border-radius: 0.5rem;
     
     cursor: pointer!important;
@@ -36,7 +154,15 @@
     transition-property: background-color;
     transition-duration: 0.2s;
     
+    
+    font-family: AmericanTypewriter;
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+    
 }
+
+
 
 
 .hide{
@@ -48,11 +174,171 @@
 }
 
 
-#startButton:hover{
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    background-color: #a33d2a;
+.slowHide {
+    animation-name: slowHide;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;  
+}
 
+.slowReveal {
+    animation-name: slowReveal;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;  
 }
 
 
+.quickHide {
+    animation-name: quickHide;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;  
+}
+
+
+.quickReveal {
+    animation-name: quickReveal;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;  
+}
+
+
+
+
+
+/*hiding animations*/
+
+@keyframes slowHide {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+
+@keyframes quickHide {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes slowReveal {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+@keyframes quickReveal {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+#startButton:hover,.playAgain:hover{
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    background-color: #a33d2a;
+}
+
+
+
+
+
+
+
+.logo{
+    margin-top:2rem!important;
+    margin-bottom:-1rem;
+    width:100%;
+    height:100%;
+}
+
+
+
+.controlTitle{
+    font-family: AmericanTypewriter;
+    font-size:1.2rem;
+    margin-right:0rem!important;
+}
+
+
+.controller{
+    margin-right:0rem!important;
+    width:100%;
+}
+
+
+
+.introduction{
+    color: var(--black);
+
+    margin-top:2rem;
+    
+    font-family: DIN;
+    font-size:1rem;
+    font-weight: 400;
+    
+}
+
+
+.controls{
+    margin-top:2rem;
+    color: var(--black);
+    font-family: AmericanTypewriter;
+    padding-left:6rem;
+    padding-right:2rem;
+}
+
+
+.fa-keyboard,.fa-mobile,.fa-headphones-alt{
+    margin-top:0.2rem;
+    margin-right:0.5rem;
+    font-size:1.4rem;
+}
+
+
+ul{
+    padding:1rem;
+    
+}
+
+
+.headphonesContainer{
+    text-align: center!important;
+    color: var(--black);
+    font-family: AmericanTypewriter;
+    margin-top:0rem!important;
+}
+
+.headphonesText{
+    margin-top:0.2rem;
+}
+
+
+.goodEndingMessage{
+    color: var(--black);
+    font-family: DIN;
+    font-size:1rem;
+    font-weight: 500;
+    padding-top:16rem;
+    
+}
+
+
+.badEndingMessage{
+    color: #eae6e6;
+    font-family: DIN;
+    font-size:1rem;
+    font-weight: 500;
+    padding-top:16rem;
+    
+}
+
+
+
+.playAgainContainer{
+    margin-top:4rem;
+    
+}

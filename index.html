@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee4f756d98.js" crossorigin="anonymous"></script>
     <script src="preloader.js"></script>
     <title>Pandora Labs</title>
 </head>
@@ -16,12 +17,108 @@
 
     <div id="preload" class="pre-loader container show">
 
+
+        <div class="logoRow row container mx-auto col-lg-4">
+            <img class="logo" src="assets/Pics/pandora's_lab_branding-02.png">
+        </div>
+
+
+        <div class="intro row container mx-auto col-lg-8">
+
+            <div class="introduction col-8 mx-auto">Welcome to your first day at Pandora Labs. We hope you enjoy your time with us, and please remember that everything you are asked to do is in the name of pure science, and advancement. Thank you for everything you have contributed thus far.</div>
+
+
+            <div class="controls row col-9 mx-auto">
+
+                <div class="desktopControls col-6">
+                    <div class="controller row col-12">
+                        <i class="fas fa-keyboard"></i>
+                        <p class="controlTitle">Controls</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>Click and Drag to view your surroundings</p>
+                        </li>
+                        <li>
+                            <p>Position cursor over objects and click to interact</p>
+                        </li>
+                        <li>
+                            <p>WASD to move</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="desktopControls col-6">
+                    <div class="controller row col-12">
+                        <i class="fas fa-mobile"></i>
+                        <p class="controlTitle">Controls</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>Move your phone to view your surroundings</p>
+                        </li>
+                        <li>
+                            <p>Position cursor over objects and tap to interact</p>
+                        </li>
+                        <li>
+                            <p>Mobile users cannot move their player (not necessary)</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="headphonesContainer row col-8 mx-auto">
+            <div class="headphones row mx-auto">
+                <i class="fas fa-headphones-alt"></i>
+                <p class="headphonesText">Headphones recommended</p>
+            </div>
+        </div>
+
+
         <div class="ui row container mx-auto my-auto">
-            <div id="startButton" class="mx-auto my-auto" onclick="begin();">Enter Pandora Labs</div>
+            <div id="startButton" class="col-3 mx-auto my-auto" onclick="begin();">Enter Pandora Labs</div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <div id="goodEndingPage" class="ending container hide">
+        
+        <div class="goodEndingMessage col-5 mx-auto">By choosing to send your research to the allies you were able to stall Lucie Kraus, and Pandora from launching their weapon. Once the allies received the information they used it launched a counter attack destroying Pandora Labs and saving millions of lives, but unfortunately not your own.</div>
+
+
+        <div class="playAgainContainer col-2 mx-auto">
+            <div class="playAgain mx-auto" onclick="window.location.reload();">Play Again?</div>
         </div>
 
     </div>
 
+
+
+    <div id="badEndingPage" class="ending container hide">
+        
+        <div class="badEndingMessage col-5 mx-auto">Choosing to hand over your research allowed the Nazi-operated Pandora Labs to complete their weapon. The weapon’s use marked the loss of millions of lives, and maybe even the end of the war. 
+
+Upon attempting to flee the facility after viewing the demonstration of your weapon, you were captured and forced to continue working for Pandora as a weapons scientist.</div>
+
+
+        <div class="playAgainContainer col-2 mx-auto">
+            <div class="playAgain mx-auto" onclick="window.location.reload();">Play Again?</div>
+        </div>
+
+    </div>
 
 
 
@@ -29,9 +126,7 @@
 
 
 
-        <a-assets timeout="45000">
-
-
+        <a-assets timeout="100">
             <asset-item id="objectBulb.000.obj" src="assets/Bulb.000.obj"></asset-item>
             <asset-item id="objectBulb.001.obj" src="assets/Bulb.001.obj"></asset-item>
             <asset-item id="objectBulb.004.obj" src="assets/Bulb.004.obj"></asset-item>
@@ -103,17 +198,17 @@
             <asset-item id="objectPlane.075.obj" src="assets/Plane.075.obj"></asset-item>
             <asset-item id="objectPlane.077.obj" src="assets/Plane.077.obj"></asset-item>
             <asset-item id="objectPlane.078.obj" src="assets/Plane.078.obj"></asset-item>
-            
-            
+
+
             <asset-item id="objectPlane.080.obj" src="assets/Plane.080.obj"></asset-item>
             <asset-item id="objectPlane.081.obj" src="assets/Plane.081.obj"></asset-item>
             <asset-item id="objectPlane.082.obj" src="assets/Plane.082.obj"></asset-item>
             <asset-item id="objectPlane.083.obj" src="assets/Plane.083.obj"></asset-item>
             <asset-item id="objectPlane.084.obj" src="assets/Plane.084.obj"></asset-item>
             <asset-item id="objectPlane.085.obj" src="assets/Plane.085.obj"></asset-item>
-            
-            
-            
+
+
+
             <asset-item id="objectCube.036.obj" src="assets/objectCube.036.obj"></asset-item>
 
 
@@ -292,15 +387,6 @@
 
 
         <a-entity id="flagsEmpty">
-<!--
-            <a-obj-model src="#objectPlane.080.obj" mtl="#materialPlane.080.mtl" material="" obj-model="" visible=""></a-obj-model>
-            <a-obj-model src="#objectPlane.081.obj" mtl="#materialPlane.081.mtl" material="" obj-model="" visible=""></a-obj-model>
-            <a-obj-model src="#objectPlane.082.obj" mtl="#materialPlane.082.mtl" material="" obj-model="" visible=""></a-obj-model>
-            <a-obj-model src="#objectPlane.083.obj" mtl="#materialPlane.083.mtl" material="" obj-model="" visible=""></a-obj-model>
-            <a-obj-model src="#objectPlane.084.obj" mtl="#materialPlane.084.mtl" material="" obj-model="" visible=""></a-obj-model>
-            <a-obj-model src="#objectPlane.085.obj" mtl="#materialPlane.085.mtl" material="" obj-model="" visible=""></a-obj-model>
--->
-
         </a-entity>
 
 
@@ -395,7 +481,7 @@
         </a-camera>
 
 
-<!---1.119 1.600 2.537-->
+        <!---1.119 1.600 2.537-->
 
         <script>
             var results = document.querySelector('#results');
@@ -586,7 +672,7 @@
 
 
             function badEndingFinale() {
-                video.volume = 0.6;
+                video.volume = 0.5;
                 video.currentTime = 0;
                 video.play();
 
@@ -594,21 +680,21 @@
 
                 setTimeout(function() {
 
-                    
-                var flag0 = document.createElement("a-obj-model");
-                var flag1 = document.createElement("a-obj-model");
-                var flag2 = document.createElement("a-obj-model");
-                var flag3 = document.createElement("a-obj-model");
-                var flag4 = document.createElement("a-obj-model");
-                var flag5 = document.createElement("a-obj-model");
-                    
-                    
-                    var flags=[flag0,flag1,flag2,flag3,flag4,flag5];
-                    
-                    for(i=0;i<6;i++){
-                        
+
+                    var flag0 = document.createElement("a-obj-model");
+                    var flag1 = document.createElement("a-obj-model");
+                    var flag2 = document.createElement("a-obj-model");
+                    var flag3 = document.createElement("a-obj-model");
+                    var flag4 = document.createElement("a-obj-model");
+                    var flag5 = document.createElement("a-obj-model");
+
+
+                    var flags = [flag0, flag1, flag2, flag3, flag4, flag5];
+
+                    for (i = 0; i < 6; i++) {
+
                         var y = i + 80;
-                        
+
                         flags[i].setAttribute("id", "flag" + i);
                         flags[i].setAttribute("src", "#objectPlane.0" + y + ".obj");
                         flags[i].setAttribute("mtl", "#materialPlane.0" + y + ".mtl");
@@ -622,70 +708,70 @@
                 }, 4000);
 
 
-                setTimeout(function(){
-                    
-                    
-                flag0 = document.querySelector("#flag0");
-                flag1 = document.querySelector("#flag1");
-                flag2 = document.querySelector("#flag2");
-                flag3 = document.querySelector("#flag3");
-                flag4 = document.querySelector("#flag4");
-                flag5 = document.querySelector("#flag5");
+                setTimeout(function() {
 
-                    
-                flag0.setAttribute("animation", "property:position; from:-0.464 0 0.578; to:-0.254 -6.985 0.578; dur:16000;");
-                flag3.setAttribute("animation", "property:position; from:-0.464 0 0.969; to:-0.254 -6.985 0.969; dur:16000;");
-                    
-                flag5.setAttribute("animation", "property:position; from:-0.366 0 0.606; to:-0.366 -6.497 0.606; dur:16000;");
-                flag4.setAttribute("animation", "property:position; from:4.081 0 0.432; to:4.081 -6.937 0.432; dur:16000;");
-                    
-                    
-                flag1.setAttribute("animation", "property:position; from:-0.211 0 -1.736;to:-0.211 -5.461 -1.736; dur:16000;");
-                flag2.setAttribute("animation", "property:position; from:-0.211 0 0.884; to:-0.211 -4.443 0.884; dur:16000;");
-                    
-                    
-                    
-                
-                    
-                    
-                },5000);
-                
-                setTimeout(function(){
-                    
 
-                    flag0.addEventListener("animationcomplete", function(){
-                        
-                        
-                        setTimeout(function(){
-                        cursor.setAttribute("sound", "src:#LightSwitch1.mp3; autoplay:true; volume:0.85;");
-                        boomLight.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
+                    flag0 = document.querySelector("#flag0");
+                    flag1 = document.querySelector("#flag1");
+                    flag2 = document.querySelector("#flag2");
+                    flag3 = document.querySelector("#flag3");
+                    flag4 = document.querySelector("#flag4");
+                    flag5 = document.querySelector("#flag5");
+
+
+                    flag0.setAttribute("animation", "property:position; from:-0.464 0 0.578; to:-0.254 -6.985 0.578; dur:16000;");
+                    flag3.setAttribute("animation", "property:position; from:-0.464 0 0.969; to:-0.254 -6.985 0.969; dur:16000;");
+
+                    flag5.setAttribute("animation", "property:position; from:-0.366 0 0.606; to:-0.366 -6.497 0.606; dur:16000;");
+                    flag4.setAttribute("animation", "property:position; from:4.081 0 0.432; to:4.081 -6.937 0.432; dur:16000;");
+
+
+                    flag1.setAttribute("animation", "property:position; from:-0.211 0 -1.736;to:-0.211 -5.461 -1.736; dur:16000;");
+                    flag2.setAttribute("animation", "property:position; from:-0.211 0 0.884; to:-0.211 -4.443 0.884; dur:16000;");
+
+
+
+
+
+
+                }, 5000);
+
+                setTimeout(function() {
+
+
+                    flag0.addEventListener("animationcomplete", function() {
+
+
+                        setTimeout(function() {
+                            cursor.setAttribute("sound", "src:#LightSwitch1.mp3; autoplay:true; volume:0.85;");
+                            boomLight.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
                         }, 13000);
-                        
-                        setTimeout(function(){
-                        cursor.setAttribute("sound__2", "src:#LightSwitch1.mp3; autoplay:true; volume:0.85;");
-                        light1.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
+
+                        setTimeout(function() {
+                            cursor.setAttribute("sound__2", "src:#LightSwitch1.mp3; autoplay:true; volume:0.85;");
+                            light1.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
                         }, 15000);
-                        
-                        setTimeout(function(){
-                        cursor.setAttribute("sound__3", "src:#LightSwitch2.mp3; autoplay:true; volume:0.85;");
-                        light2.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
-                        
-                            setTimeout(function(){
-                                end();
+
+                        setTimeout(function() {
+                            cursor.setAttribute("sound__3", "src:#LightSwitch2.mp3; autoplay:true; volume:0.85;");
+                            light2.setAttribute("animation", "property:light.intensity; from:0.4; to:0; dur:100;");
+
+                            setTimeout(function() {
+                                badEnd();
                             }, 200);
-                            
+
                         }, 17000);
-                        
-                        
-                        
+
+
+
                     });
-                    
-                    
-                },5100);
-                
-                
-                
-                
+
+
+                }, 5100);
+
+
+
+
             }
 
 
@@ -793,14 +879,13 @@
                     boomLight.setAttribute("animation", "property:light.intensity; from:0.4; to:70; dur:500; delay:22000;");
                 }, 4000);
                 boomLight.addEventListener("animationcomplete", function() {
-                    end();
+                    goodEnd();
                 });
             }
-
         </script>
+<script src="script.js"></script>
 
     </a-scene>
-
 
 
 
@@ -813,6 +898,5 @@
 </body>
 
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 
 </html>
