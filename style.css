@@ -9,6 +9,7 @@
 }
 
 
+/*
 @font-face {
     font-family: DIN;
     src: url(assets/Fonts/DIN/DINPro-Light_1.otf);
@@ -20,6 +21,7 @@
     src: url(assets/Fonts/DIN/DINPro_1.otf);
     font-weight:400;
 }
+*/
 
 @font-face {
     font-family: DIN;
@@ -27,6 +29,7 @@
     font-weight:500;
 }
 
+/*
 @font-face {
     font-family: DIN;
     src: url(assets/Fonts/DIN/DINPro-Bold_1.otf);
@@ -39,6 +42,7 @@
     src: url(assets/Fonts/DIN/DINPro-Black_1.otf);
     font-weight:800;
 }
+*/
 
 
 

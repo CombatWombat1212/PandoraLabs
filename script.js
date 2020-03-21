@@ -26,7 +26,7 @@ function goodEnd(){
 
     }, 3000);
     
-    
+        
 //    scene.classList.remove("show");
     
     
